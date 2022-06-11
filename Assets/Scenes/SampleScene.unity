@@ -452,6 +452,8 @@ GameObject:
   - component: {fileID: 475893391}
   - component: {fileID: 475893392}
   - component: {fileID: 475893393}
+  - component: {fileID: 475893395}
+  - component: {fileID: 475893394}
   m_Layer: 0
   m_Name: Dead_Tree_Bridge
   m_TagString: Untagged
@@ -545,6 +547,47 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &475893394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475893390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5590126ec2477044daa6c612aacd9ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallingTree: {fileID: 475893390}
+  rb: {fileID: 475893393}
+  col: {fileID: 475893395}
+--- !u!61 &475893395
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475893390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.31, y: -2.24}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.89, y: 6.83}
+  m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +1935,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingTree: {fileID: 475893390}
+  rb: {fileID: 0}
+  col: {fileID: 0}
 --- !u!4 &1470165619
 Transform:
   m_ObjectHideFlags: 0
