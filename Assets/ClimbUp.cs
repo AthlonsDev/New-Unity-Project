@@ -5,18 +5,23 @@ using UnityEngine;
 public class ClimbUp : MonoBehaviour
 {
     public GameObject player;
+    public BoxCollider2D trigger;
+    public BoxCollider2D col;
 
-    private void OnCollisionStay2D(Collision2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.collider.tag == "Player")
+        if (collision.tag == "Player")
         {
 
             if (Input.GetButtonDown("Climb"))
             {
+                col.enabled = true;
                 climbUp();
             }
-        } 
+        }
     }
+
 
     private void climbUp()
     {

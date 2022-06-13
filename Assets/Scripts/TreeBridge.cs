@@ -7,7 +7,6 @@ public class TreeBridge : MonoBehaviour
     public GameObject fallingTree;
     public Rigidbody2D rb;
     public Collider2D col;
-    public CircleCollider2D trigger;
 
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -23,8 +22,6 @@ public class TreeBridge : MonoBehaviour
                 col.enabled = true;
                 //TODO: Add a Force to Push it
                 rb.AddForce(new Vector2(100f, 0));
-                // disable trigger collider
-                trigger.enabled = false;
 
             }
         }
