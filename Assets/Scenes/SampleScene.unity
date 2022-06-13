@@ -563,6 +563,7 @@ MonoBehaviour:
   fallingTree: {fileID: 475893390}
   rb: {fileID: 475893393}
   col: {fileID: 475893395}
+  trigger: {fileID: 0}
 --- !u!61 &475893395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2010,6 +2011,7 @@ GameObject:
   - component: {fileID: 1282844171}
   - component: {fileID: 1282844172}
   - component: {fileID: 1282844173}
+  - component: {fileID: 1282844174}
   m_Layer: 0
   m_Name: Dead_Tree_Stump
   m_TagString: Untagged
@@ -2092,10 +2094,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: -2.45}
+  m_Offset: {x: -0.07, y: -2.97}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2106,8 +2108,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.2}
+  m_Size: {x: 2.6, y: 1.81}
   m_EdgeRadius: 0
+--- !u!114 &1282844174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282844170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dff63f0a122a5f4b9fa1232975129a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1172379898}
 --- !u!1 &1470165616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,6 +2169,7 @@ MonoBehaviour:
   fallingTree: {fileID: 475893390}
   rb: {fileID: 0}
   col: {fileID: 0}
+  trigger: {fileID: 0}
 --- !u!4 &1470165619
 Transform:
   m_ObjectHideFlags: 0
