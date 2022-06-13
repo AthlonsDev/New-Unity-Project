@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 6674760225825922203}
   - component: {fileID: 6674760225825922201}
   - component: {fileID: 6674760225825922200}
+  - component: {fileID: 5348967697596340599}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -222,7 +223,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6674760225825922401}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -331,6 +332,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075890a1534f70148a4a6a1a4fb77528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &5348967697596340599
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674760225825922401}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 19.2, y: 10.8}
+  m_Direction: 0
 --- !u!1 &6674760226133743901
 GameObject:
   m_ObjectHideFlags: 0
