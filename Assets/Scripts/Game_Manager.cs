@@ -11,17 +11,20 @@ public class Game_Manager : MonoBehaviour
 
     public void UpdateCheckpoint(Vector2 position)
     {
-        //Updates Checkpoint Location
+
         NewPosition = position;
 
     }
-
     public void RespawnPlayer()
     {
-        //Respawns Player at Checkpoint
+
         player.transform.position = NewPosition;
+    }
 
+    private void FixedUpdate()
+    {
+        Debug.Log("New Checkpoints is: " + NewPosition);
     }
 
 
-    }
+}
