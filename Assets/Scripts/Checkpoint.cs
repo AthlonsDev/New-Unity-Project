@@ -8,7 +8,7 @@ public class Checkpoint : MonoBehaviour
 
     private void Start()
     {
-       // SetCheckpoint();
+        //SetCheckpoint();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,9 +26,11 @@ public class Checkpoint : MonoBehaviour
 
         Vector2 checkposition = new Vector2(transform.position.x, transform.position.y);
 
-        gameMaster.GetComponent<Game_Manager>().UpdateCheckpoint(checkposition);
+        Game_Manager gm = gameMaster.GetComponent<Game_Manager>();
 
-        //Debug.Log(checkposition);
+        gm.lastCheckpointPosition = checkposition;
+
+        Debug.Log("Checkpoint Pos: " + checkposition);
 
     }
 }

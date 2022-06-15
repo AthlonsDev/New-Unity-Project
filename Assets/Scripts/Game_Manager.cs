@@ -1,30 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game_Manager : MonoBehaviour
 {
-    public GameObject player;
-    private Vector2 newPosition;
-    public Vector2 NewPosition { get => newPosition; set => newPosition = value; }
+    private static Game_Manager instance;
+    public Vector2 lastCheckpointPosition;
 
-
-    public void UpdateCheckpoint(Vector2 position)
+    void Awake()
     {
-
-        NewPosition = position;
-
-    }
-    public void RespawnPlayer()
-    {
-
-        player.transform.position = NewPosition;
-    }
-
-    private void FixedUpdate()
-    {
-        Debug.Log("New Checkpoints is: " + NewPosition);
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log(lastCheckpointPosition);
+        }
+    }
 
 }

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMaster: {fileID: 3988481206159109401, guid: 013bc4b1c1734574f94ad237b4dc8fc5, type: 3}
+  player: {fileID: 6674760225825922401, guid: 43fb30fc81d548c4fb3e5e8dfb1b7545, type: 3}
 --- !u!58 &3074364600577711316
 CircleCollider2D:
   m_ObjectHideFlags: 0
