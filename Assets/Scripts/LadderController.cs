@@ -9,7 +9,7 @@ public class LadderController: MonoBehaviour {
     bool canClimb = false;
     public float speed = 1f;
     
-}
+
 
 OnTriggerEnter2D(Collider2D collision) 
 {
@@ -40,5 +40,7 @@ void FixedUpdate() {
         float climbing = Input.GetAxisRaw("LeftH") * speed;
         controller.Move(false, false, climbing * Time.fixedDeltaTime);
     }
+}
+
 }
 
