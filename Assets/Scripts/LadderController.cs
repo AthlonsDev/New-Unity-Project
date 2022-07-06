@@ -11,8 +11,8 @@ public class LadderController: MonoBehaviour {
     
 
 
-OnTriggerEnter2D(Collider2D collision) 
-{
+    OnTriggerEnter2D(Collider2D collision) 
+    {
     
     if(collision.tag == player) {
     
@@ -21,9 +21,9 @@ OnTriggerEnter2D(Collider2D collision)
             canClimb = true;
         }
     }
-}
+    }
 
-OnTriggerStay2D(Collider2D collider) {
+    OnTriggerStay2D(Collider2D collider) {
         if(collision.tag == player) {
             if (canClimb == true) {
                 // pressing interact to get off from ladder
@@ -32,15 +32,14 @@ OnTriggerStay2D(Collider2D collider) {
                 }            
             }
         }
-}
-
-void FixedUpdate() {
-    if(canClimb == true) {
-        // translate movement from horizontal to vertical
-        float climbing = Input.GetAxisRaw("LeftH") * speed;
-        controller.Move(false, false, climbing * Time.fixedDeltaTime);
     }
-}
 
+    void FixedUpdate() 
+    {
+        if(canClimb == true) {
+        // translate movement from horizontal to vertical
+            float climbing = Input.GetAxisRaw("LeftH") * speed;
+            controller.Move(false, false, climbing * Time.fixedDeltaTime);
+        }
+    }   
 }
-
