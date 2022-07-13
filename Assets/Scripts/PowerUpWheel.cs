@@ -26,6 +26,7 @@ void private void Update() {
             // This selects The Hook 
             player.GetComponent<PowerUp>().selectedItem = "Hook";
         }
+        
     }
 
 }

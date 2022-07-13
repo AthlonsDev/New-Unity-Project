@@ -14,7 +14,7 @@ public class LadderController: MonoBehaviour {
     OnTriggerEnter2D(Collider2D collision) 
     {
     
-    if(collision.tag == player) {
+    if(collision.tag == "player") {
     
     //pressing interact to climb
         if(Input.GetButtonDown("Interaction")) {
@@ -24,7 +24,7 @@ public class LadderController: MonoBehaviour {
     }
 
     OnTriggerStay2D(Collider2D collider) {
-        if(collision.tag == player) {
+        if(collision.tag == "player") {
             if (canClimb == true) {
                 // pressing interact to get off from ladder
                if(Input.GetButtonDown("Interaction")) {
