@@ -22,7 +22,7 @@ public class TreeBridge : MonoBehaviour
                 col.enabled = true;
                 //TODO: Add a Force to Push it
                 rb.AddForce(new Vector2(100f, 0));
-
+                
             }
         }
     }
