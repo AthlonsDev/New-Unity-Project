@@ -12,7 +12,19 @@ public class PowerUp: MonoBehaviour {
         //Get Name of Selected Power Up from wheel
         if (selectedItem == "Hook") 
         {
-            selectedItem = "hook";
+            selectedItem = "Hook";
+        }
+        if (selectedItem = "Attack")
+        {
+            selectedItem = "Attack"
+        }
+        if (selectedItem = "Find")
+        {
+            selectedItem = "Find"
+        }
+        if (selectedItem = "Hide")
+        {
+            selectedItem = "Hide"
         }
     }
 
