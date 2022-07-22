@@ -26,6 +26,18 @@ void private void Update() {
             // This selects The Hook 
             player.GetComponent<PowerUp>().selectedItem = "Hook";
         }
+        if(input.GetButtonDown("Right")) {
+            // This selects The Attack/Offensive Light
+            player.GetComponent<PowerUp>().selectedItem = "Attack";
+        }
+        if(input.GetButtonDown("Left")) {
+            // This selects The Hiding Mechanism 
+            player.GetComponent<PowerUp>().selectedItem = "Hide";
+        }
+        if(input.GetButtonDown("Down")) {
+            // This selects The Finding Object skill (highlights quest Items so they are visible)
+            player.GetComponent<PowerUp>().selectedItem = "Find";
+        }
         
     }
 
