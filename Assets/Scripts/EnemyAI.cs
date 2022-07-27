@@ -6,6 +6,9 @@ public class EnemyAI: MonoBehaviour
 {
     public Animator animator;
     public GameObject player;
+    public Float speed;
+    public Float range;
+    public String type;
 
     // TODO: Use starpathfinder library to give a path to enemy
 
@@ -23,4 +26,6 @@ public class EnemyAI: MonoBehaviour
 
         }
     }
+
+
 }
