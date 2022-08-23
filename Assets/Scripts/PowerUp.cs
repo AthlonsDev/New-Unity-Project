@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUp: MonoBehaviour {
 
     public GameObject player;
-    string selectedItem;
+    public string selectedItem;
 
     private void Update() 
     {
@@ -14,29 +14,30 @@ public class PowerUp: MonoBehaviour {
         {
             selectedItem = "Hook";
         }
-        if (selectedItem = "Attack")
+        if (selectedItem == "Attack")
         {
-            selectedItem = "Attack"
+            selectedItem = "Attack";
         }
-        if (selectedItem = "Find")
+        if (selectedItem == "Find")
         {
-            selectedItem = "Find"
+            selectedItem = "Find";
         }
-        if (selectedItem = "Hide")
+        if (selectedItem == "Hide")
         {
-            selectedItem = "Hide"
+            selectedItem = "Hide";
         }
     }
 
-    OnTriggerStay2D(collider collider) {
-        if(collider.tag == "hooking" && selectedItem == "hook")
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "hooking" && selectedItem == "hook")
         {
             useHook();
         }
     }
 
     void useHook() {
-        if(input.GetButtonDown("Shoot")) 
+        if(Input.GetButtonDown("Shoot")) 
         {
             // TODO: Shoot hook from light thing to hook spot
             // use prefab or raycast
@@ -44,6 +45,7 @@ public class PowerUp: MonoBehaviour {
         }
     }
 
-    
+
+
 
 }

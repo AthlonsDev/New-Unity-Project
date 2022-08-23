@@ -9,10 +9,10 @@ public class PowerUpWheel: MonoBehaviour
 
     public GameObject player;
 
-void private void Update() {
+private void Update() {
     
     // When controller button is pressed(holding)
-    while(input.GetButtonDown("SkillMenu")) 
+    while(Input.GetButtonDown("SkillMenu")) 
     {
         // Old System
         // Pause Game and Move Around Wheel and select buttons instead
@@ -22,19 +22,19 @@ void private void Update() {
         // New System
         // Select skill with directional buttons
         // TODO: Set These names to the correpsonding buttons in the input system
-        if(input.GetButtonDown("Up")) {
+        if(Input.GetButtonDown("Up")) {
             // This selects The Hook 
             player.GetComponent<PowerUp>().selectedItem = "Hook";
         }
-        if(input.GetButtonDown("Right")) {
+        if(Input.GetButtonDown("Right")) {
             // This selects The Attack/Offensive Light
             player.GetComponent<PowerUp>().selectedItem = "Attack";
         }
-        if(input.GetButtonDown("Left")) {
+        if(Input.GetButtonDown("Left")) {
             // This selects The Hiding Mechanism 
             player.GetComponent<PowerUp>().selectedItem = "Hide";
         }
-        if(input.GetButtonDown("Down")) {
+        if(Input.GetButtonDown("Down")) {
             // This selects The Finding Object skill (highlights quest Items so they are visible)
             player.GetComponent<PowerUp>().selectedItem = "Find";
         }

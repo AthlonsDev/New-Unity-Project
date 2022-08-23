@@ -8,22 +8,28 @@ public class LadderController: MonoBehaviour {
     public CharacterController2D controller;
     bool canClimb = false;
     public float speed = 1f;
-    
 
 
-    OnTriggerEnter2D(Collider2D collision) 
+    float verticalMove = 0f;
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-    
-    if(collision.tag == "player") {
-    
-    //pressing interact to climb
-        if(Input.GetButtonDown("Interaction")) {
-            canClimb = true;
+        if (collision.tag == "player")
+        {
+
+            //pressing interact to climb
+            if (Input.GetButtonDown("Interaction"))
+            {
+                canClimb = true;
+            }
         }
     }
-    }
 
-    OnTriggerStay2D(Collider2D collider) {
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
         if(collision.tag == "player") {
             if (canClimb == true) {
                 // pressing interact to get off from ladder
@@ -39,7 +45,8 @@ public class LadderController: MonoBehaviour {
         if(canClimb == true) {
         // translate movement from horizontal to vertical
             float climbing = Input.GetAxisRaw("LeftH") * speed;
-            controller.Move(false, false, climbing * Time.fixedDeltaTime);
+            // controller.Move(0f, climbing * Time.fixedDeltaTime, false)
+            verticalMove = Input.GetAxisRaw("LeftV") * player.GetComponent<playerMovement>().runSpeed;
         }
     }   
 }
